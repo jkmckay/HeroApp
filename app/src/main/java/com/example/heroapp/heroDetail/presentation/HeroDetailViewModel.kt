@@ -22,10 +22,10 @@ class HeroDetailViewModel @Inject constructor(
         get() = _state
 
     init {
-        setContent()
+        getHero()
     }
 
-    private fun setContent() {
+    private fun getHero() {
         viewModelScope.launch {
             _state.value = HeroDetailState.Loading
             repo.heroFlow.collect { result ->
