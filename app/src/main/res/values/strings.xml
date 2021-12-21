@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HeroApp</string>
+
+    <string name="hero_list_top_bar_title">Heroes</string>
+    <string name="hero_list_item_content_desc">Hero Image</string>
+    <string name="hero_list_item_hero_name">%1$s</string>
+    <string name="hero_list_item_name">full name: %1$s</string>
+    <string name="hero_list_item_publisher">published by: %1$s</string>
+    <string name="hero_list_item_no_publisher">publisher unknown</string>
+    <string name="hero_list_item_first_appearance">first appeared: %1$s</string>
+    <string name="hero_list_error_title">Oh no! Something\'s gone wrong</string>
+    <string name="hero_list_error_button_text">Retry</string>
+    <string name="hero_list_no_content_text">No Heroes!</string>
+</resources>

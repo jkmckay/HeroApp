@@ -1,0 +1,86 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id "org.jlleitschuh.gradle.ktlint" version "10.2.0"
+}
+
+apply from: 'libraries.gradle'
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.heroapp"
+        minSdk 26
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    ktlint {
+        disabledRules = ["no-wildcard-imports"]
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation libraries.coreKtx
+    implementation libraries.appcompat
+    implementation libraries.material
+    implementation libraries.compose
+    implementation libraries.composeMaterial
+    implementation libraries.composeToolingPreview
+    implementation libraries.lifecycleRuntime
+    implementation libraries.activityCompose
+    implementation libraries.navigationCompose
+    implementation libraries.runtimeLiveData
+    implementation libraries.moshi
+    kapt libraries.moshiKotlinCodegen
+    implementation libraries.retrofit
+    implementation libraries.retrofitConverterMoshi
+    implementation libraries.hiltAndroid
+    kapt libraries.hiltCompiler
+    implementation libraries.hiltNavigationCompose
+    implementation libraries.coil
+
+    testImplementation libraries.junitKtx
+    testImplementation libraries.junit
+    androidTestImplementation libraries.testExtensionJunit
+    androidTestImplementation libraries.espresso
+    androidTestImplementation libraries.composeJunit
+    debugImplementation libraries.composeUiTooling
+    testImplementation libraries.mockk
+    testImplementation libraries.coroutinesTest
+    testImplementation libraries.coreTesting
+}

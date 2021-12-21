@@ -1,0 +1,55 @@
+def versions = [:]
+
+versions.compose = '1.0.5'
+versions.coreKtx = '1.7.0'
+versions.appcompat = '1.3.1'
+versions.material = '1.4.0'
+versions.lifecycleRuntime = '2.4.0'
+versions.activityCompose = '1.4.0'
+versions.navigationCompose = '2.4.0-beta02'
+versions.moshi = '1.12.0'
+versions.retrofit = '2.9.0'
+versions.hiltAndroid = '2.38.1'
+versions.hiltNavigationCompose = '1.0.0-beta01'
+versions.coil = '1.3.2'
+versions.junit = '4.+'
+versions.testExtensionJunit = '1.1.3'
+versions.espresso = '3.4.0'
+versions.mockk = '1.11.0'
+versions.coroutinesTest = '1.5.2'
+versions.coreTesting = '2.1.0'
+versions.junitKtx = '1.1.3'
+
+ext.versions = versions
+
+def libraries = [:]
+
+libraries.coreKtx = "androidx.core:core-ktx:$versions.coreKtx"
+libraries.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
+libraries.material = "com.google.android.material:material:$versions.material"
+libraries.compose = "androidx.compose.ui:ui:$versions.compose"
+libraries.composeMaterial = "androidx.compose.material:material:$versions.compose"
+libraries.composeToolingPreview = "androidx.compose.ui:ui-tooling-preview:$versions.compose"
+libraries.lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycleRuntime"
+libraries.activityCompose = "androidx.activity:activity-compose:$versions.activityCompose"
+libraries.navigationCompose = "androidx.navigation:navigation-compose:$versions.navigationCompose"
+libraries.runtimeLiveData = "androidx.compose.runtime:runtime-livedata:$versions.compose"
+libraries.moshi = "com.squareup.moshi:moshi:$versions.moshi"
+libraries.moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi"
+libraries.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+libraries.retrofitConverterMoshi = "com.squareup.retrofit2:converter-moshi:$versions.retrofit"
+libraries.hiltAndroid = "com.google.dagger:hilt-android:$versions.hiltAndroid"
+libraries.hiltCompiler = "com.google.dagger:hilt-compiler:$versions.hiltAndroid"
+libraries.hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:$versions.hiltNavigationCompose"
+libraries.coil = "io.coil-kt:coil-compose:$versions.coil"
+libraries.junitKtx = "androidx.test.ext:junit-ktx:$versions.junitKtx"
+libraries.junit = "junit:junit:$versions.junit"
+libraries.testExtensionJunit = "androidx.test.ext:junit$versions.testExtensionJunit"
+libraries.espresso = "androidx.test.espresso:espresso-core:$versions.espresso"
+libraries.composeJunit = "androidx.compose.ui:ui-test-junit4:$versions.compose"
+libraries.composeUiTooling = "androidx.compose.ui:ui-tooling:$versions.compose"
+libraries.mockk = "io.mockk:mockk:$versions.mockk"
+libraries.coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutinesTest"
+libraries.coreTesting = "androidx.arch.core:core-testing:$versions.coreTesting"
+
+ext.libraries = libraries
